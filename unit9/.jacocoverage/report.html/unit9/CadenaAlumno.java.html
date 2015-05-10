@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../.resources/report.css" type="text/css"/><link rel="shortcut icon" href="../.resources/report.gif" type="image/gif"/><title>CadenaAlumno.java</title><link rel="stylesheet" href="../.resources/prettify.css" type="text/css"/><script type="text/javascript" src="../.resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../.sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JaCoCoverage analysis of project &quot;unit9&quot; (powered by JaCoCo from EclEmma)</a> &gt; <a href="index.source.html" class="el_package">unit9</a> &gt; <span class="el_source">CadenaAlumno.java</span></div><h1>CadenaAlumno.java</h1><pre class="source lang-java linenums">package unit9;
+
+import static java.lang.System.*;
+
+/**
+ * Clase que implementa métodos básicos de Java de trabajo con Strings.
+ * @author Jesús Llorente Gutiérrez
+ */
+
+<span class="nc" id="L10">public class CadenaAlumno {</span>
+    
+    //-----METODOS-----//
+    
+    /**
+     * Método que compara dos cadenas de texto y dice si son iguales o no.
+     * @param cadena1 --&gt; Primera cadena a comparar.
+     * @param cadena2 --&gt; Segunda cadena a comparar.
+     * @return --&gt; Devuelve &quot;true&quot; si son iguales o &quot;false&quot; si no lo son.
+     * @author Jesús Llorente Gutiérrez
+     * @version 1.0
+     */
+    
+    public static boolean sonIguales(String cadena1, String cadena2){
+        
+        //-----ATRIBUTOS-----//
+        
+<span class="nc" id="L27">        char[] array1 = cadena1.toCharArray();</span>
+<span class="nc" id="L28">        char[] array2 = cadena2.toCharArray();</span>
+        
+        //-----PROGRAMA-----//
+        
+<span class="nc bnc" id="L32" title="All 2 branches missed.">        if(longitudCadena(cadena1) != longitudCadena(cadena2)){</span>
+<span class="nc" id="L33">            return false;</span>
+        }
+        else{
+<span class="nc bnc" id="L36" title="All 2 branches missed.">            for(int i = 0; i &lt; longitudCadena(cadena1); i++){</span>
+<span class="nc bnc" id="L37" title="All 2 branches missed.">                if(array1[i] != array2[i]){</span>
+<span class="nc" id="L38">                    return false;</span>
+                }
+            }
+<span class="nc" id="L41">            return true;</span>
+        }
+    }
+    
+     /**
+     * Método que dice si una cadena de texto es mayor (alfabéticamente) 
+     * que otra.
+     * @param cadena1 --&gt; Primera cadena a comparar.
+     * @param cadena2 --&gt; Segunda cadena a comparar.
+     * @return --&gt; Devuelve &quot;true&quot; si la primera cadena es mayor que la segunda
+     * o &quot;false&quot; si no lo es.
+     * @author Jesús Llorente Gutiérrez
+     * @version 1.0
+     */
+    
+    public static boolean esMayor(String cadena1, String cadena2){
+    
+        //-----ATRIBUTOS-----//
+        
+<span class="nc" id="L60">        char[] array1 = cadena1.toCharArray();</span>
+<span class="nc" id="L61">        char[] array2 = cadena2.toCharArray();</span>
+        
+        //-----PROGRAMA-----//
+        
+<span class="nc bnc" id="L65" title="All 2 branches missed.">        if(longitudCadena(cadena1) &gt; longitudCadena(cadena2)){</span>
+<span class="nc" id="L66">            return true;</span>
+        }
+        else{
+<span class="nc bnc" id="L69" title="All 2 branches missed.">            if(longitudCadena(cadena1) &lt; longitudCadena(cadena2)){</span>
+<span class="nc" id="L70">                return false;</span>
+            }
+            else{
+<span class="nc bnc" id="L73" title="All 2 branches missed.">                for(int i = 0; i &lt; longitudCadena(cadena1); i++){</span>
+<span class="nc bnc" id="L74" title="All 2 branches missed.">                    if(array1[i] &gt; array2[i]){</span>
+<span class="nc" id="L75">                        return true;</span>
+                    }
+                }
+<span class="nc" id="L78">                return false;</span>
+            }
+        }
+        
+    }
+    
+    /**
+     * Método que dice si una cadena de texto es menor (alfabéticamente) 
+     * que otra.
+     * @param cadena1 --&gt; Primera cadena a comparar.
+     * @param cadena2 --&gt; Segunda cadena a comparar.
+     * @return --&gt; Devuelve &quot;true&quot; si la primera cadena es menor que la segunda
+     * o &quot;false&quot; si no lo es.
+     * @author Jesús Llorente Gutiérrez
+     * @version 1.0
+     */
+    
+    public static boolean esMenor(String cadena1, String cadena2){
+    
+         //-----ATRIBUTOS-----//
+        
+<span class="nc" id="L99">        char[] array1 = cadena1.toCharArray();</span>
+<span class="nc" id="L100">        char[] array2 = cadena2.toCharArray();</span>
+        
+        //-----PROGRAMA-----//
+        
+<span class="nc bnc" id="L104" title="All 2 branches missed.">        if(longitudCadena(cadena1) &lt; longitudCadena(cadena2)){</span>
+<span class="nc" id="L105">            return true;</span>
+        }
+        else{
+<span class="nc bnc" id="L108" title="All 2 branches missed.">            if(longitudCadena(cadena1) &gt; longitudCadena(cadena2)){</span>
+<span class="nc" id="L109">                return false;</span>
+            }
+            else{
+<span class="nc bnc" id="L112" title="All 2 branches missed.">                for(int i = 0; i &lt; longitudCadena(cadena1); i++){</span>
+<span class="nc bnc" id="L113" title="All 2 branches missed.">                    if(array1[i] &lt; array2[i]){</span>
+<span class="nc" id="L114">                        return true;</span>
+                    }
+                }
+<span class="nc" id="L117">                return false;</span>
+            }
+        }
+    }
+    
+    /**
+     * Método que dice si una cadena de texto es igual (alfabéticamente) 
+     * que otra ignorando las mayúsculas.
+     * @param cadena1 --&gt; Primera cadena a comparar.
+     * @param cadena2 --&gt; Segunda cadena a comparar.
+     * @return --&gt; Devuelve &quot;true&quot; si las cadenas son iguales o &quot;false&quot; si no
+     * lo son.
+     * @author Jesús Llorente Gutiérrez
+     * @version 1.0
+     */
+    
+    public static boolean comparaIgnorandoMayusculas(String cadena1, String cadena2){
+    
+        //-----ATRIBUTOS-----//
+        
+<span class="nc" id="L137">        char[] array1 = cadena1.toCharArray();</span>
+<span class="nc" id="L138">        char[] array2 = cadena2.toCharArray();</span>
+        
+        //-----PROGRAMA-----//
+        
+<span class="nc bnc" id="L142" title="All 2 branches missed.">        if(longitudCadena(cadena1) != longitudCadena(cadena2)){</span>
+<span class="nc" id="L143">            return false;</span>
+        }
+        else{
+<span class="nc bnc" id="L146" title="All 2 branches missed.">            for(int i = 0; i &lt; longitudCadena(cadena1); i++){</span>
+<span class="nc bnc" id="L147" title="All 2 branches missed.">                if(array1[i] != array2[i]){</span>
+<span class="nc bnc" id="L148" title="All 12 branches missed.">                    if((array1[i] + 32) != array2[i] &amp;&amp; (array1[i] - 32) != array2[i]</span>
+                       || (array1[i] == 164 &amp;&amp; array2[i] != 165) &amp;&amp; (array1[i] == 165 &amp;&amp; array2[i] != 164)){
+<span class="nc" id="L150">                        return false;</span>
+                    }
+                }
+            }
+<span class="nc" id="L154">            return true;</span>
+        }
+    }
+    
+    /**
+     * Método que busca en una cadena un texto y lo sustituye por otro.
+     * @param cadena --&gt; Cadena de texto en la que se busca el texto/regla
+     * @param regla --&gt; Texto que buscamos en la cadena para sustituir 
+     * @param cambio --&gt; Texto que reemplazará al predefinido en la regla 
+     * @return --&gt; Devuelve la cadena con los cambios realizados.
+     * @author Jesús Llorente Gutiérrez
+     * @version 1.0
+     */
+    
+    public static String reemplazaTodos (String cadena, String regla, String cambio){
+    
+        //-----ATRIBUTOS-----//
+        
+<span class="nc" id="L172">        char[] arrayCadena = cadena.toCharArray();</span>
+<span class="nc" id="L173">        char[] arrayRegla = regla.toCharArray();</span>
+<span class="nc" id="L174">        String cadenaFinal = &quot;&quot;;</span>
+<span class="nc" id="L175">        boolean encontrado = false;</span>
+        int auxiliar; 
+        
+        //-----PROGRAMA-----//
+        
+<span class="nc bnc" id="L180" title="All 2 branches missed.">        for(int i = 0; i &lt; longitudCadena(cadena); i++){</span>
+<span class="nc bnc" id="L181" title="All 2 branches missed.">            if(arrayCadena[i] == arrayRegla[0]){</span>
+<span class="nc" id="L182">                auxiliar = i;</span>
+<span class="nc bnc" id="L183" title="All 2 branches missed.">                for(int j = 0; j &lt; longitudCadena(regla); j++){</span>
+<span class="nc bnc" id="L184" title="All 2 branches missed.">                    if(arrayRegla[j] == arrayCadena[auxiliar]){</span>
+<span class="nc bnc" id="L185" title="All 2 branches missed.">                        if(j == longitudCadena(regla) - 1){</span>
+<span class="nc" id="L186">                            encontrado = true;</span>
+                        }
+                    }
+                    else{
+                        break;
+                    }
+<span class="nc" id="L192">                    auxiliar++;</span>
+                }
+<span class="nc bnc" id="L194" title="All 2 branches missed.">                if(encontrado){</span>
+<span class="nc" id="L195">                    cadenaFinal += cambio;</span>
+<span class="nc" id="L196">                    i += longitudCadena(regla) - 1;</span>
+                }
+            }
+            else{
+<span class="nc" id="L200">                cadenaFinal += arrayCadena[i];</span>
+            }
+<span class="nc" id="L202">            encontrado = false;</span>
+        }
+<span class="nc" id="L204">        return cadenaFinal;</span>
+    }
+    
+    /**
+     * Método que busca en una cadena un texto y lo sustituye por otro solamente 
+     * la primera vez que lo encuentra.
+     * @param cadena --&gt; Cadena de texto en la que se busca el texto/regla
+     * @param regla --&gt; Texto que buscamos en la cadena para sustituir 
+     * @param cambio --&gt; Texto que reemplazará al predefinido en la regla 
+     * @return --&gt; Devuelve la cadena con los cambios realizados.
+     * @author Jesús Llorente Gutiérrez
+     * @version 1.0
+     */
+    
+    public static String reemplazaPrimero (String cadena, String regla, String cambio){
+    
+        //-----ATRIBUTOS-----//
+        
+<span class="nc" id="L222">        char[] arrayCadena = cadena.toCharArray();</span>
+<span class="nc" id="L223">        char[] arrayRegla = regla.toCharArray();</span>
+<span class="nc" id="L224">        String cadenaFinal = &quot;&quot;;</span>
+<span class="nc" id="L225">        boolean encontrado = false;</span>
+        int auxiliar; 
+        
+        //-----PROGRAMA-----//
+        
+<span class="nc bnc" id="L230" title="All 2 branches missed.">        for(int i = 0; i &lt; longitudCadena(cadena); i++){</span>
+<span class="nc bnc" id="L231" title="All 2 branches missed.">            if(!encontrado){</span>
+<span class="nc bnc" id="L232" title="All 2 branches missed.">                if(arrayCadena[i] == arrayRegla[0]){</span>
+<span class="nc" id="L233">                    auxiliar = i;</span>
+<span class="nc bnc" id="L234" title="All 2 branches missed.">                    for(int j = 0; j &lt; longitudCadena(regla); j++){</span>
+<span class="nc bnc" id="L235" title="All 2 branches missed.">                        if(arrayRegla[j] == arrayCadena[auxiliar]){</span>
+<span class="nc bnc" id="L236" title="All 2 branches missed.">                            if(j == longitudCadena(regla) - 1){</span>
+<span class="nc" id="L237">                                encontrado = true;</span>
+                            }
+                        }
+                        else{
+                            break;
+                        }
+<span class="nc" id="L243">                        auxiliar++;</span>
+                    }
+<span class="nc bnc" id="L245" title="All 2 branches missed.">                    if(encontrado){</span>
+<span class="nc" id="L246">                        cadenaFinal += cambio;</span>
+<span class="nc" id="L247">                        i += longitudCadena(regla) - 1;</span>
+                    }
+                }
+                else{
+<span class="nc" id="L251">                    cadenaFinal += arrayCadena[i];</span>
+                }
+            }
+            else{
+<span class="nc" id="L255">                cadenaFinal += arrayCadena[i];</span>
+            }
+        }
+<span class="nc" id="L258">        return cadenaFinal;</span>
+    }
+    
+    /**
+     * Método que muestra por pantalla una cadena dividida tantas veces como el 
+     * usuario le diga mediante una regla y un número de veces máximo.
+     * @param cadena --&gt; Cadena de texto que se usará para realizar los cambios
+     * @param regla --&gt; Texto que se buscará en la cadena
+     * @param limite --&gt; Número de veces máximo en el que se dividirá la cadena
+     * @author Jesús Llorente Gutiérrez
+     * @version 1.0
+     */
+    
+    public static void muestraSplitLimite(String cadena, String regla, int limite){
+    
+        //-----ATRIBUTOS-----//
+        
+<span class="nc" id="L275">        String cadenaFinal = &quot;&quot;;</span>
+<span class="nc" id="L276">        char[] arrayCadena = cadena.toCharArray();</span>
+<span class="nc" id="L277">        char[] arrayRegla = regla.toCharArray();</span>
+<span class="nc" id="L278">        boolean encontrado = false;</span>
+        int auxiliar;
+<span class="nc" id="L280">        int contador = 0;</span>
+        
+        //-----PROGRAMA-----//
+        
+<span class="nc bnc" id="L284" title="All 2 branches missed.">        for(int i = 0; i &lt; longitudCadena(cadena); i++){</span>
+<span class="nc bnc" id="L285" title="All 2 branches missed.">            if(arrayCadena[i] == arrayRegla[0]){</span>
+<span class="nc" id="L286">                auxiliar = i;</span>
+<span class="nc bnc" id="L287" title="All 2 branches missed.">                for(int j = 0; j &lt; longitudCadena(regla); j++){</span>
+<span class="nc bnc" id="L288" title="All 2 branches missed.">                    if(arrayRegla[j] == arrayCadena[auxiliar]){</span>
+<span class="nc bnc" id="L289" title="All 2 branches missed.">                        if(j == longitudCadena(regla) - 1){</span>
+<span class="nc" id="L290">                            encontrado = true;</span>
+                        }
+                    }
+                    else{
+                        break;
+                    }
+<span class="nc" id="L296">                    auxiliar++;</span>
+                }
+<span class="nc bnc" id="L298" title="All 2 branches missed.">                if(encontrado){</span>
+<span class="nc" id="L299">                    cadenaFinal += &quot; &quot;;</span>
+                }
+            }
+<span class="nc" id="L302">            cadenaFinal += arrayCadena[i];</span>
+<span class="nc" id="L303">            encontrado = false;</span>
+        }
+<span class="nc" id="L305">        out.println(cadenaFinal);</span>
+        
+<span class="nc" id="L307">    }</span>
+    
+    /**
+     * Método que elimina los espacios en blanco de una cadena.
+     * @param cadena --&gt; Texto al que se le quitarán los espacios.
+     * @return --&gt; Cadena de texto sin los espacios en blanco.
+     * @author Jesús Llorente Gutiérrez
+     * @version 1.0
+     */
+    
+    public static String quitaEspacios(String cadena){
+        
+        //-----ATRIBUTOS-----//
+        
+<span class="nc" id="L321">        String cadenaFinal = &quot;&quot;;</span>
+<span class="nc" id="L322">        char[] arrayCadena = cadena.toCharArray();</span>
+        
+        //-----PROGRAMA-----//
+        
+<span class="nc bnc" id="L326" title="All 2 branches missed.">        for(int i = 0; i &lt; longitudCadena(cadena); i++){</span>
+<span class="nc bnc" id="L327" title="All 2 branches missed.">            if(arrayCadena[i] != ' '){</span>
+<span class="nc" id="L328">                cadenaFinal += arrayCadena[i];</span>
+            }
+        }
+<span class="nc" id="L331">        return cadenaFinal;</span>
+    }
+    
+    /**
+     * Método que recibe una cadena de texto y la devuelve en mayúscula
+     * @param cadena --&gt; Cadena de texto que se convertirá a mayúcula
+     * @return --&gt; Cadena de texto convertida a mayúcula
+     * @author Jesús Llorente Gutiérrez
+     * @version 1.0
+     */
+    
+    public static String convertirMayusculas(String cadena){
+    
+        //-----ATRIBUTOS-----//
+        
+<span class="nc" id="L346">        String cadenaFinal = &quot;&quot;;</span>
+<span class="nc" id="L347">        char[] arrayCadena = cadena.toCharArray();</span>
+        
+        //-----PROGRAMA-----//
+        
+<span class="nc bnc" id="L351" title="All 2 branches missed.">        for(int i = 0; i &lt; longitudCadena(cadena); i++){</span>
+<span class="nc bnc" id="L352" title="All 4 branches missed.">            if(arrayCadena[i] &gt;= 97 &amp;&amp; arrayCadena[i] &lt;= 122){</span>
+<span class="nc" id="L353">                cadenaFinal += (char)(arrayCadena[i] - 32);</span>
+            }
+            else{
+<span class="nc bnc" id="L356" title="All 2 branches missed.">                if(arrayCadena[i] == 241){</span>
+<span class="nc" id="L357">                    cadenaFinal += (char)(arrayCadena[i] - 32);</span>
+                }
+                else{
+<span class="nc" id="L360">                    cadenaFinal += (char)arrayCadena[i];</span>
+                }
+            }
+        }
+<span class="nc" id="L364">        return cadenaFinal;</span>
+    }
+    
+    /**
+     * Método que recibe una cadena de texto y la devuelve en minúscula
+     * @param cadena --&gt; Cadena de texto que se convertirá a minúscula
+     * @return --&gt; Cadena de texto convertida a minúscula
+     * @author Jesús Llorente Gutiérrez
+     * @version 1.0
+     */
+    
+    public static String convertirMinusculas(String cadena){
+    
+        //-----ATRIBUTOS-----//
+        
+<span class="nc" id="L379">        String cadenaFinal = &quot;&quot;;</span>
+<span class="nc" id="L380">        char[] arrayCadena = cadena.toCharArray();</span>
+        
+        //-----PROGRAMA-----//
+        
+<span class="nc bnc" id="L384" title="All 2 branches missed.">        for(int i = 0; i &lt; longitudCadena(cadena); i++){</span>
+<span class="nc bnc" id="L385" title="All 4 branches missed.">            if(arrayCadena[i] &gt;= 65 &amp;&amp; arrayCadena[i] &lt;= 90){</span>
+<span class="nc" id="L386">                cadenaFinal += (char)(arrayCadena[i] + 32);</span>
+            }
+            else{
+<span class="nc bnc" id="L389" title="All 2 branches missed.">                if(arrayCadena[i] == 209){</span>
+<span class="nc" id="L390">                    cadenaFinal += (char)(arrayCadena[i] + 32);</span>
+                }
+                else{
+<span class="nc" id="L393">                    cadenaFinal += (char)arrayCadena[i];</span>
+                }
+            }
+        }
+<span class="nc" id="L397">        return cadenaFinal;</span>
+    }
+    
+    /**
+     * Método que devuelve la longitud de una cadena
+     * @param cadena --&gt; Cadena de texto del que se quiere saber la longitud
+     * @return --&gt; Longitud de la cadena
+     * @author Jesús Llorente Gutiérrez
+     * @version 1.0
+     */
+    
+    public static long longitudCadena(String cadena){
+        
+        //-----ATRIBUTOS-----//
+        
+<span class="nc" id="L412">        char[] array = cadena.toCharArray();</span>
+<span class="nc" id="L413">        long contador = 0;</span>
+        
+        //-----PROGRAMA-----//
+        
+<span class="nc bnc" id="L417" title="All 2 branches missed.">        for(char letra:array){</span>
+<span class="nc" id="L418">            contador++;</span>
+        }
+<span class="nc" id="L420">        return contador;</span>
+    }
+    
+    /**
+     * Método que dice si una cadena empieza por un prefijo que el usuario le 
+     * proporciona
+     * @param cadena --&gt; Texto principal que se comprobará
+     * @param prefijo --&gt; Prefijo con el que se comparará a cadena
+     * @return --&gt; Devuelve &quot;true&quot; si la &quot;cadena&quot; empieza por el &quot;prefijo&quot; o
+     * &quot;false&quot; si no. 
+     * @author Jesús Llorente Gutiérrez
+     * @version 1.0
+     */
+    
+    public static boolean empiezaCon(String cadena, String prefijo){
+    
+        //-----ATRIBUTOS-----//
+        
+<span class="nc" id="L438">        char[] arrayCadena = cadena.toCharArray();</span>
+<span class="nc" id="L439">        char[] arrayPrefijo = prefijo.toCharArray();</span>
+        
+        //-----PROGRAMA-----//
+        
+<span class="nc bnc" id="L443" title="All 2 branches missed.">        for(int i = 0; i &lt; longitudCadena(prefijo); i++){</span>
+<span class="nc bnc" id="L444" title="All 2 branches missed.">            if(arrayCadena[i] != arrayPrefijo[i]){</span>
+<span class="nc" id="L445">                return false;</span>
+            }
+        }
+<span class="nc" id="L448">        return true;</span>
+    }
+    
+    /**
+     * Método que dice si una cadena acaba por un sufijo que el usuario le 
+     * proporciona
+     * @param cadena --&gt; Texto principal que se comprobará
+     * @param sufijo --&gt; Prefijo con el que se comparará a cadena
+     * @return --&gt; Devuelve &quot;true&quot; si la &quot;cadena&quot; acaba por el &quot;sufijo&quot; o
+     * &quot;false&quot; si no. 
+     * @author Jesús Llorente Gutiérrez
+     * @version 1.0
+     */
+    
+    public static boolean acabaEn(String cadena, String sufijo){
+    
+        //-----ATRIBUTOS-----//
+        
+<span class="nc" id="L466">        char[] arrayCadena = cadena.toCharArray();</span>
+<span class="nc" id="L467">        char[] arraySufijo = sufijo.toCharArray();</span>
+<span class="nc" id="L468">        int auxiliar = (int)longitudCadena(sufijo) - 1;</span>
+        
+        //-----PROGRAMA-----//
+        
+<span class="nc bnc" id="L472" title="All 2 branches missed.">        for(int i = (int)longitudCadena(cadena) - 1; auxiliar &gt;= 0 ; i--){</span>
+<span class="nc bnc" id="L473" title="All 2 branches missed.">            if(arrayCadena[i] != arraySufijo[auxiliar]){</span>
+<span class="nc" id="L474">                return false;</span>
+            }
+<span class="nc" id="L476">            auxiliar--;</span>
+        }
+<span class="nc" id="L478">        return true;</span>
+    }
+    
+    /**
+     * Método que devuelve la posicion en la que se encuentra un texto en una
+     * cadena de texto
+     * @param cadena --&gt; Texto en el que se buscará la posición de la/s letra/s 
+     * @param letra --&gt; Letra/s que se buscara/n en la cadena de texto
+     * @return --&gt; Posición en la que se encuentra/n la/s letra/s
+     * @author Jesús Llorente Gutiérrez
+     * @version 1.0
+     */
+    
+    public static long posicionPrimeraCadena(String cadena, String letra){
+    
+        //-----ATRIBUTOS-----//
+        
+<span class="nc" id="L495">        char[] arrayCadena = cadena.toCharArray();</span>
+<span class="nc" id="L496">        char[] arrayLetra = letra.toCharArray();</span>
+        int auxiliar; 
+        
+        //-----PROGRAMA-----//
+        
+<span class="nc bnc" id="L501" title="All 2 branches missed.">        for(int i = 0; i &lt; longitudCadena(cadena); i++){</span>
+<span class="nc bnc" id="L502" title="All 2 branches missed.">            if(arrayCadena[i] == arrayLetra[0]){</span>
+<span class="nc" id="L503">                auxiliar = i;</span>
+<span class="nc bnc" id="L504" title="All 2 branches missed.">                for(int j = 0; j &lt; longitudCadena(letra); j++){</span>
+<span class="nc bnc" id="L505" title="All 2 branches missed.">                    if(arrayLetra[j] == arrayCadena[auxiliar]){</span>
+<span class="nc bnc" id="L506" title="All 2 branches missed.">                        if(j == longitudCadena(letra) - 1){</span>
+<span class="nc" id="L507">                            return i;</span>
+                        }
+                    }
+                    else{
+                        break;
+                    }
+<span class="nc" id="L513">                    auxiliar++;</span>
+                }
+            }
+        }
+<span class="nc" id="L517">        return -1;</span>
+    }
+    
+    /**
+     * Método que devuelve una parte de la cadena de texto indicandole la 
+     * posición de inicio
+     * @param cadena --&gt; Texto de donde se extraerá la subcadena
+     * @param posicionInicio --&gt; Posición desde la que se empezara a sustraer la
+     * subcadena
+     * @return --&gt; Subcadena extraida de la cadena de texto
+     * @author Jesús Llorente Gutiérrez
+     * @version 1.0
+     */
+    
+    public static String extraerSubstring(String cadena, int posicionInicio){
+    
+        //-----ATRIBUTOS-----//
+        
+<span class="nc" id="L535">        char[] arrayCadena = cadena.toCharArray();</span>
+<span class="nc" id="L536">        String cadenaFinal = &quot;&quot;;</span>
+        
+        //-----PROGRAMA-----//
+        
+<span class="nc bnc" id="L540" title="All 2 branches missed.">        for(int i = posicionInicio; i &lt; longitudCadena(cadena); i++){</span>
+<span class="nc" id="L541">            cadenaFinal += arrayCadena[i];</span>
+        }
+<span class="nc" id="L543">        return cadenaFinal;</span>
+    } 
+    
+    /**
+     * Método que devuelve una parte de la cadena de texto indicandole la 
+     * posición de inicio y la posición de fin
+     * @param cadena --&gt; Texto de donde se extraerá la subcadena
+     * @param posicionInicio --&gt; Posición desde la que se empezara a sustraer la
+     * subcadena
+     * @param posicionFinal --&gt; Posición en la que acaba de extraer la subcadena
+     * @return --&gt; Subcadena extraida de la cadena de texto
+     * @author Jesús Llorente Gutiérrez
+     * @version 1.0
+     */
+    
+    public static String extraerSubstring(String cadena, int posicionInicio, int posicionFinal){
+    
+        //-----ATRIBUTOS-----//
+        
+<span class="nc" id="L562">        char[] arrayCadena = cadena.toCharArray();</span>
+<span class="nc" id="L563">        String cadenaFinal = &quot;&quot;;</span>
+        
+        //-----PROGRAMA-----//
+        
+<span class="nc bnc" id="L567" title="All 2 branches missed.">        for(int i = posicionInicio; i != posicionFinal; i++){</span>
+<span class="nc" id="L568">            cadenaFinal += arrayCadena[i];</span>
+        }
+<span class="nc" id="L570">        return cadenaFinal;</span>
+    }
+    
+    /**
+     * Método que permite concatenar dos cadenas de texto mediante el operando +
+     * @param cadena1 --&gt; Primera cadena a concatenar
+     * @param cadena2 --&gt; Segunda cadena a concatenar
+     * @return --&gt; Resultado de concatenar &quot;cadena1&quot; y &quot;cadena2&quot;
+     * @author Jesús Llorente Gutiérrez
+     * @version 1.0
+     */
+    
+    public static String concatenaCadenas(String cadena1, String cadena2){
+    
+        //-----ATRIBUTOS-----//
+        
+<span class="nc" id="L586">        char[] arrayCadena1 = cadena1.toCharArray();</span>
+<span class="nc" id="L587">        char[] arrayCadena2 = cadena2.toCharArray();</span>
+<span class="nc" id="L588">        String cadenaFinal = &quot;&quot;;</span>
+        
+        //-----PROGRAMA-----//
+        
+<span class="nc bnc" id="L592" title="All 2 branches missed.">        for(int i = 0; i &lt; longitudCadena(cadena1); i++){</span>
+<span class="nc" id="L593">            cadenaFinal += arrayCadena1[i];</span>
+        }
+<span class="nc bnc" id="L595" title="All 2 branches missed.">        for(int i = 0; i &lt; longitudCadena(cadena2); i++){</span>
+<span class="nc" id="L596">            cadenaFinal += arrayCadena2[i];</span>
+        }
+<span class="nc" id="L598">        return cadenaFinal;</span>
+    }  
+}
+
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.eclemma.org/jacoco">JaCoCo</a> 0.7.4.201502262128</span></div></body></html>
