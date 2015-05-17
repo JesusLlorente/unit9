@@ -597,6 +597,14 @@ public class CadenaAlumno {
         }
         return cadenaFinal;
     }  
+    
+    /**
+     * Método principal de la clase CadenaAlumno
+     * @param args --> Parámetros que recibe el método main
+     */
+    public static void main(String[] args){
+    
+    }
 }
 
 
